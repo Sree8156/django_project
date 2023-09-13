@@ -1,0 +1,177 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css ">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+  <link rel="stylesheet" href="{% static '/css/style.css'%}">
+
+
+  <link rel="icon" href="data:image/png;base64,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" type="image/gif" sizes="16x16">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar bg-primary navbar-expand-md ">
+    <div class="container">
+      <div class="col-6 text-left pl-md-0">
+        <h3 class="text-white"> i-kart </h3>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-12">
+        <ul class="navbar-nav justify-content-center  fw-bold">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="signup">Sign Up</a>
+          </li>
+          <li>
+            <a class="nav-link text-white" href="login">Login</a>
+          </li>
+
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  {% block content %}
+
+
+  {% include 'slider.html' %}
+
+  <header class="bg-info
+  text-white text-center py-3">
+    <h1>Welcome to i-kart </h1>
+  </header>
+
+<br>
+
+  <section class="homepage-section collection-module" data-module-template="heroes" data-analytics-region="hero">
+    <div class="container">
+      <div class="row">
+        <!-- Back to School Section -->
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <img
+              src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/e1578b60-d390-4b53-9a2c-853493bc22d2._CR0,0,1200,628_SX430_QL70_.jpg"
+              alt="Back to School Image" class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title">Save on iPad for university.</h2>
+              <h3 class="card-subtitle mb-3 text-muted">
+                Plus get AirPods with Mac and Apple Pencil with iPad.
+              </h3>
+              <a class="btn btn-primary" href="pad" target="_self" rel="follow"
+                data-analytics-region="buy" aria-label="Shop now, back to school 2023">Shop now</a>
+            </div>
+          </div>
+        </div>
+        <!-- MacBook Air Section -->
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <img
+              src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/9d0f90e1-f8ee-47e8-8d13-e3142729d3d4._CR0,0,1200,628_SX430_QL70_.jpg"
+              alt="MacBook Air Image" class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title" aria-label="Macbook Air 15 inch">MacBook Air 15”</h2>
+              <h3 class="card-subtitle mb-3 text-muted">Impressively big. Impossibly thin.</h3>
+              <br>
+              <a class="btn btn-primary" href="mac" target="_self" rel="follow"
+                data-analytics-region="buy" aria-label="Shop now, back to school 2023">Shop now</a>
+            </div>
+          </div>
+        </div>
+        <!-- iPhone 14 Section -->
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <img
+              src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-finish-unselect-gallery-1-202207_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1662129048005" style="height: 320px; "
+              alt="iPhone 14 Image" class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title">iPhones </h2>
+              <h3 class="card-subtitle mb-3 text-muted">Wonderful. A line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system </h3>
+              
+              <a class="btn btn-primary" href="phone" target="_self" rel="follow"
+                data-analytics-region="buy" aria-label="Shop now, back to school 2023">Shop now</a>
+            </div>
+          </div>
+        </div>
+        <!-- accessories -->
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <img
+              src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/916bb886-dd38-4835-a659-fbcc92d36f25._CR0,97,2000,1047_SX430_QL70_.jpg"
+              alt="MacBook Air Image" class="card-img-top">
+            <div class="card-body">
+              <h2 class="card-title" aria-label="Macbook Air 15 inch">i accessories</h2>
+              <br>
+              <h3 class="card-subtitle mb-3 text-muted">Shop Apple accessories for Apple Watch, iPhone, iPad and Mac..</h3>
+              <br><br>
+              <a class="btn btn-primary" href="accessories" target="_self" rel="follow"
+                data-analytics-region="buy" aria-label="Shop now, back to school 2023">Shop now</a>
+                <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Include Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  {% endblock %}
+
+
+
+
+  <!-- {% comment %} <section class="fixed-bottom">
+    <footer class="pt-2 pb-2  bg-primary text-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8">
+            <h4>Emergency Contact Number: 0123456789</h4>
+          </div>
+          <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-end">
+            © 2022 City Hospital. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section> {% endcomment %} -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
